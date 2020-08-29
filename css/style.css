@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Alata&display=swap');
+*{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+body{
+    width: 100%;
+    background-color:rgb(253, 250, 245);
+}
+body .navcima{
+    width: 100%;
+    height: 75px;
+}
+body .header{
+    width: 100%;
+    height: 75px;
+    background-color: rgb(5, 101, 146);
+    background-image: url("/img/back.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.384);
+}
+body .header h1{
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Alata', sans-serif;
+    color: white;
+}
+.texto1 {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 50px 0 0 0;
+}
+.parteesquerda {
+    width: 40%;
+    height: auto;
+    flex-direction: column;
+    margin: 0 0px 20px 0px;
+    
+}
+.parteesquerda h1 {
+    font-family: 'Alata', sans-serif;
+    color: rgb(5, 101, 146);
+    font-size: 20pt;
+    margin-left: 80px;
+}
+.parteesquerda p {
+    font-family: 'Alata', sans-serif;
+    font-size: 12pt;
+    text-align: justify;
+    margin-left: 80px;
+}
+.partedireita {
+    display: flex;
+    width: 40%;
+    height: auto;
+    float: right;
+    margin-right: 80px;
+}
+.partedireita img{
+    width: 500px;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0px 1px 10px black;
+}
+ .texto2{
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color:rgb(5, 101, 146);
+    box-shadow: 1px 1px 10px black;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.parteesquerda2 {
+    width: 40%;
+    height: auto;
+    flex-direction: column;
+    margin-left: 80px;
+}
+.partedireita2{
+    width: 40%;
+    height: auto;
+    flex-direction: column;
+    margin: 0 0px 20px 0px;
+    margin-right: 80px;
+}
+.parteesquerda2 img {
+    width: 500px;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0px 1px 10px black;
+    margin-top: 50px;
+    margin-right: 80px;
+}
+.partedireita2 h1 {
+    font-family: 'Alata', sans-serif;
+    color: rgb(255, 255, 255);
+    font-size: 20pt;
+    font-weight: bold;
+    text-align: right;
+    margin-top: 50px;
+}
+.partedireita2 p {
+    font-family: 'Alata', sans-serif;
+    font-size: 12pt;
+    text-align: justify;
+    color: rgb(255, 255, 255);
+}
+/* DUVIDA: por que o texto fica por cima da imagem? é por causa que a imagem da esquerda não se adapta e não quebra a linha */
+.texto3 {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 50px 0 50px 0;
+}
+.parteesquerda3 {
+    width: 40%;
+    height: auto;
+    flex-direction: column;
+    margin: 0 0px 20px 0px;
+    
+}
+.parteesquerda3 h1 {
+    font-family: 'Alata', sans-serif;
+    color: rgb(5, 101, 146);
+    font-size: 20pt;
+    margin-left: 80px;
+}
+.parteesquerda3 p {
+    font-family: 'Alata', sans-serif;
+    font-size: 12pt;
+    text-align: justify;
+    margin-left: 80px;
+}
+.partedireita3 {
+    display: flex;
+    width: 40%;
+    height: auto;
+    float: right;
+    margin-right: 80px;
+}
+.partedireita3 iframe{
+    width: 500px;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0px 1px 10px black;
+}
+.rodape{
+    width: 100%;
+    height: 75px;
+    background-color: rgb(5, 101, 146);
+}
+.rodape p{
+    color: white;
+    margin-left: 80px;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    font-family: 'Alata', sans-serif;
+    font-size: 12pt;
+}
+
+/* DUVIDA: como colocar um video no site? 
+E como colocar um hyperlink no texto? Vai ter versão do site pra mobile? 
+e como alinhar os textos na direita? Aparentemente todos estao alinhados à esquerda*/
