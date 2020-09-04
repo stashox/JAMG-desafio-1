@@ -2,32 +2,176 @@
 *{
     width: 100%;
     height: 100%;
-    margin: 0;
+    margin: 0 0 0 0;
+}
+html{
+    scroll-behavior: smooth; /*comando para deixar o scroll suave*/
 }
 body{
     width: 100%;
-    background-color:rgb(253, 250, 245);
+    background-color:#f7f7f7;
 }
-body .navcima{
+.navcima{
     width: 100%;
     height: 75px;
+    background-color: #1B2B42;
+    position: fixed;
+    margin: 0;
+    float: right;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
-body .header{
-    width: 100%;
-    height: 75px;
-    background-color: rgb(5, 101, 146);
-    background-image: url("/img/back.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.384);
+/* DUVIDA: como fazer com que o espaço da navcima fique ocupado?
+quando eu clico em algo, ele come o espaço da coisa. */
+.navcima #img{
+    width: 155px;
+    height: auto;
+    margin-left: 20px;
+    float: left;
 }
-body .header h1{
-    text-align: center;
+.navcima ul{
+    float: right;
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+.navcima a{
+    text-decoration: none;
     display: flex;
     align-items: center;
     justify-content: center;
     font-family: 'Alata', sans-serif;
-    color: white;
+    color: #E7E9E4;
+    font-size: 12pt;
+}
+.navcima li{
+    margin: 0;
+    width: auto;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    list-style: none;
+    padding: 0px 10px 0px 10px;
+}
+.navcima li:hover{
+    background-color: #3E5366;
+    transition: 0.3s;
+}
+.header{
+    width: 100%;
+    height: 500px;
+    background-color: #E7E9E4;
+    background-image: url("/img/back.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    transition: all .6s ease-in-out;
+}
+.header h1{
+    width: auto;
+    height: auto;
+    text-align: center;
+    font-family: 'Alata', sans-serif;
+    color: #E7E9E4;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+.header h2{
+    width: 50vw;
+    height: auto;
+    text-align: center;
+    font-family: 'Alata', sans-serif;
+    color: #E7E9E4;
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+.header a{
+    width: 60px;
+    height: 25px;
+    font-family: 'Alata', sans-serif;
+    color: #E7E9E4;
+    text-decoration: none;
+    border: solid 1px #E7E9E4;
+    border-radius: 20px;
+}
+.header a:hover{
+    background-color: #E7E9E4;
+    color: #1B2B42;
+}
+#metas{
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: baseline;  /*o float não ficou muito bom, melhor continuar assim*/
+    justify-content: center;
+    margin: 30px 0 30px 0;
+    background-color: #f7f7f7;
+}
+#metas img{
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 15px 0 15px 0;
+}
+#metas h4{
+    font-family: 'Alata', sans-serif;
+    color: #2E3337;
+    font-size: 20pt;
+    text-align: center;
+}
+#metas p{
+    font-family: 'Alata', sans-serif;
+    color: #2E3337;
+    font-size: 12pt;
+    text-align: justify;
+}
+#metas div{
+    width: 16%;
+    height: auto;
+}
+#meta1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px 25px 20px 0;
+}
+#meta2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px 25px 20px 0;
+}
+#meta3{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px 25px 20px 0;
+}
+#meta4{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px 25px 20px 0;
+}
+#meta5{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px 0 20px 0;
 }
 .texto1 {
     width: 100%;
@@ -35,26 +179,25 @@ body .header h1{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin: 50px 0 0 0;
+    background-color: white; /*#1B2B42*/
 }
 .parteesquerda {
     width: 40%;
     height: auto;
-    flex-direction: column;
-    margin: 0 0px 20px 0px;
-    
+    padding: 50px;   
 }
 .parteesquerda h1 {
     font-family: 'Alata', sans-serif;
-    color: rgb(5, 101, 146);
+    color: #1B2B42; /*#E7E9E4*/
     font-size: 20pt;
-    margin-left: 80px;
+    margin-left: 30px;
 }
 .parteesquerda p {
     font-family: 'Alata', sans-serif;
     font-size: 12pt;
     text-align: justify;
-    margin-left: 80px;
+    margin-left: 30px;
+    color: #1B2B42;
 }
 .partedireita {
     display: flex;
@@ -68,7 +211,8 @@ body .header h1{
     height: auto;
     display: flex;
     align-items: center;
-    box-shadow: 0px 1px 10px black;
+    margin: 30px 0 30px 0;
+    border-radius: 3px;
 }
  .texto2{
     width: 100%;
@@ -76,47 +220,40 @@ body .header h1{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color:rgb(5, 101, 146);
-    box-shadow: 1px 1px 10px black;
-    margin-top: 50px;
-    margin-bottom: 50px;
+    background-color: #f7f7f7; /*#53C7A4; */
+    /* box-shadow: 1px 1px 10px black; */
 }
 .parteesquerda2 {
     width: 40%;
     height: auto;
-    flex-direction: column;
     margin-left: 80px;
-    margin-bottom: 50px;
 }
 .parteesquerda2 img {
-    width: 100%
+    width: 100%;
     height: auto;
     display: flex;
     align-items: center;
-    box-shadow: 0px 1px 10px black;
-    margin-top: 50px;
-    margin-right: 80px;
+    margin: 30px 80px 30px 0;
+    border-radius: 3px;
 }
 .partedireita2{
     width: 40%;
-    height: auto;
-    flex-direction: column;
-    margin: 0 0px 20px 0px;
-    margin-right: 80px;
+    height: auto;    
+    padding: 50px;
+    padding-right: 80px;
 }
 .partedireita2 h1 {
     font-family: 'Alata', sans-serif;
-    color: rgb(255, 255, 255);
+    color: #1B2B42;
     font-size: 20pt;
     font-weight: bold;
     text-align: right;
-    margin-top: 50px;
 }
 .partedireita2 p {
     font-family: 'Alata', sans-serif;
     font-size: 12pt;
     text-align: justify;
-    color: rgb(255, 255, 255);
+    color: #1B2B42;
 }
 /* DUVIDA: por que o texto fica por cima da imagem? é por causa que a imagem da esquerda não se adapta e não quebra a linha */
 .texto3 {
@@ -125,26 +262,25 @@ body .header h1{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin: 50px 0 50px 0;
+    background-color:white;
 }
 .parteesquerda3 {
     width: 40%;
     height: auto;
-    flex-direction: column;
-    margin: 0 0px 20px 0px;
-    
+    margin: 0 0px 20px 0px; 
 }
 .parteesquerda3 h1 {
     font-family: 'Alata', sans-serif;
-    color: rgb(5, 101, 146);
+    color: #1B2B42;
     font-size: 20pt;
-    margin-left: 80px;
+    margin: 30px 0 0 80px;
 }
 .parteesquerda3 p {
     font-family: 'Alata', sans-serif;
     font-size: 12pt;
     text-align: justify;
     margin-left: 80px;
+    color: #1B2B42;
 }
 .partedireita3 {
     display: flex;
@@ -154,27 +290,246 @@ body .header h1{
     margin-right: 80px;
 }
 .partedireita3 iframe{
-    width: 100%;
-    height: 305px;
+    width: 100%; /* precisa ser 100% para ser dinamico */
+    height: 430px;
     display: flex;
     align-items: center;
-    box-shadow: 0px 1px 10px black;
+    margin: 30px 0 30px 0;
+    border-radius: 3px;
+}
+.texto4{
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #f7f7f7;
+}
+.parteesquerda4{
+    width: 40%;
+    height: auto;
+    margin: 0 0px 0px 80px;
+}
+.parteesquerda4 iframe{
+    width: 100%;
+    height: 430px;
+    display: flex;
+    align-items: center;
+    margin: 30px 0 30px 0;
+    border-radius: 3px;
+}
+.partedireita4 {
+    width: 40%;
+    height: auto;
+    padding: 50px;
+    padding-right: 80px;
+}
+.partedireita4 h1{
+    font-family: 'Alata', sans-serif;
+    color: #1B2B42;
+    font-size: 20pt;
+    text-align: right;
+}
+.partedireita4 p{
+    font-family: 'Alata', sans-serif;
+    font-size: 12pt;
+    text-align: justify;
+    color: #1B2B42;
+}
+.texto5 {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white; /*#1B2B42*/
+}
+.parteesquerda5 {
+    width: 40%;
+    height: auto;
+    padding: 50px;
+    padding-left: 80px;
+    
+}
+.parteesquerda5 h1 {
+    font-family: 'Alata', sans-serif;
+    color: #1B2B42; /*#E7E9E4*/
+    font-size: 18pt;
+}
+.parteesquerda5 p {
+    font-family: 'Alata', sans-serif;
+    font-size: 12pt;
+    text-align: justify;
+    color: #1B2B42;
+}
+.partedireita5 {
+    display: flex;
+    width: 40%;
+    height: auto;
+    float: right;
+    margin-right: 80px;
+}
+.partedireita5 img{
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    margin: 30px 0 30px 0;
+    border-radius: 3px;
+}
+
+.texto6 {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #f7f7f7; /*#1B2B42*/
+}
+.partedireita6 {
+    width: 40%;
+    height: auto;
+    padding: 50px;
+    padding-right: 80px;
+}
+.partedireita6 h1 {
+    font-family: 'Alata', sans-serif;
+    color: #1B2B42; /*#E7E9E4*/
+    font-size: 23pt;
+    text-align: right;
+}
+.partedireita6 p {
+    font-family: 'Alata', sans-serif;
+    font-size: 12pt;
+    text-align: justify;
+    color: #1B2B42;
+}
+.parteesquerda6 {
+    display: flex;
+    width: 40%;
+    height: auto;
+    float: right;
+    margin-left: 80px;
+}
+.parteesquerda6 img{
+    width: 70%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    margin-top: 5px;
+    margin-bottom: 25px;
+}
+.saibamais{
+    width: auto;
+    height: auto;
+    background-color: #f7f7f7;
+    font-family: 'Alata', sans-serif;
+    font-size: 12pt;
+    color: #1B2B42;
+    padding: 25px 0 25px 0;
+    padding-left: 80px;
+}
+.saibamais .videos{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+.saibamais iframe{
+    width: 500px;
+    height: 300px;
+    margin-right: 25px;
+}
+.saibamais h2{
+    width: 100%;
+    padding-bottom: 10px;
+    font-size: 23pt;
+}
+.saibamais p{
+    width: 100%;
+    font-family: 'Alata', sans-serif;
+    font-size: 10pt;
+}
+.texto7 {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white; /*#1B2B42*/
+}
+.parteesquerda7 {
+    width: 40%;
+    height: auto;
+    padding: 50px;
+    padding-left: 80px;
+    
+}
+.parteesquerda7 h1 {
+    font-family: 'Alata', sans-serif;
+    color: #1B2B42; /*#E7E9E4*/
+    font-size: 18pt;
+}
+.parteesquerda7 p {
+    font-family: 'Alata', sans-serif;
+    font-size: 12pt;
+    text-align: justify;
+    color: #1B2B42;
+}
+.partedireita7 {
+    display: flex;
+    width: 40%;
+    height: auto;
+    float: right;
+    margin-right: 80px;
+}
+.partedireita7 img{
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    margin: 30px 0 30px 0;
+    border-radius: 3px;
+}
+
+.bibliografia{
+    width: auto;
+    height: auto;
+    background-color: white;
+    font-family: 'Alata', sans-serif;
+    font-size: 12pt;
+    color: #1B2B42;
+    padding: 25px 0 25px 0;
+    padding-left: 80px;
+}
+.bibliografia h2{
+    width: 100%;
+    padding-bottom: 10px;
+    font-size: 23pt;
+}
+.bibliografia p{
+    width: 100%;
+    font-family: 'Alata', sans-serif;
+    font-size: 10pt;
 }
 .rodape{
     width: 100%;
     height: 75px;
-    background-color: rgb(5, 101, 146);
+    background-color: #1B2B42;
+    margin: 0;
+    position: absolute;
+    /* box-shadow: 0px -5px 10px rgba(0, 0, 0, 0.425); */
 }
 .rodape p{
-    color: white;
-    margin-left: 80px;
+    width: auto;
+    height: 100%;
+    color: #E7E9E4;
     text-align: left;
     display: flex;
     align-items: center;
     font-family: 'Alata', sans-serif;
     font-size: 12pt;
+    padding-left: 50px;
 }
-
-/* DUVIDA: como colocar um video no site? 
-E como colocar um hyperlink no texto? Vai ter versão do site pra mobile? 
-e como alinhar os textos na direita? Aparentemente todos estao alinhados à esquerda*/
