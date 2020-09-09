@@ -15,68 +15,107 @@ body{
     width: 100%;
     height: 75px;
     background-color: #1B2B42;
-    position: fixed;
-    margin: 0;
-    float: right;
+    position: absolute;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    float: right;
 }
 /* DUVIDA: como fazer com que o espaço da navcima fique ocupado?
 quando eu clico em algo, ele come o espaço da coisa. */
 .navcima #img{
-    width: 20rem;
+    width: 30vw;
     height: auto;
     margin-left: 20px;
-    float: left;
-}
-.navcima ul{
-    float: right;
-    width: auto;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
+    justify-content:  space-around;
 }
-.navcima a{
-    text-decoration: none;
+.navcima .menua{
     display: flex;
     align-items: center;
-    justify-content: center;
-    font-family: 'Alata', sans-serif;
-    color: #E7E9E4;
-    font-size: 11pt;
+    justify-content: flex-end;
+    padding: 5%;
 }
-.navcima li{
-    margin: 0;
-    width: 80px;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    list-style: none;
-    padding: 0px 10px 0px 10px;
-}
-.navcima li:hover{
-    background-color: #3E5366;
-    transition: 0.3s;
-}
-.menu{
+.navcima .menu{
     width: 62px;
     height: 36px;
+}
+.navcima ul{
+    display: none;
+}
+#seta{
+    display: none;
+}
+.sidenav {
+    height: 100%; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    top: 0; /* Stay at the top */
+    right: 0;
+    background-color: #1B2B42;
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.35s; /* 0.5 second transition effect to slide in the sidenav */
+    box-shadow: -1px 0px 10px rgba(0, 0, 0, 0.356); /*colocar sombras*/
+  }
+  .sidenav img{
+    height: 16px;
+    width: 16px;
+  }
+  .final{
+      height: auto;
+  }
+  .sidenav .insta{
+    margin-left: -20px;
+  }
+  .sidenav .fotos{
     display: flex;
-    float: right;
-    margin-right: 30px;
-    cursor:pointer;
-    display: none; /*deixa o item invisivel e sem ocupar espaço*/
-}
-.menua{
-    display: none;
-}
-.sidenav{
-    display: none;
-}
+    align-items: center;
+    justify-content: flex-start;
+    height: auto;
+    margin-left: 3px;
+    margin-top: -3px;
+  }
+  .sidenav .github {
+      margin: 0 0 0 -3.5px;
+  }
+  .sidenav a {
+      width: auto;
+    height: auto;
+    padding: 0 8px 3px 20px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #ffffff;
+    display: block;
+    transition: 0.2s;
+    font-family: 'Poppins', sans-serif;
+  }
+  .sidenav .closebtn {
+    position: absolute;
+    top: 7px;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+  .sidenav .traco {
+    border-top: 1px solid rgba(235, 235, 235, 0.418);
+    margin-top: 15px;
+    box-shadow: 0px -6px 3px rgba(0, 0, 0, 0.021); /*colocar sombras*/
+  }
+  .sidenav .copy{
+      font-size: 18px;
+  }
+  #main {
+    transition: margin-left .5s;
+    padding: 20px;
+  }
+  @media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+  }
 .header{
-    width: auto;
+    width: 100%;
     height: 500px;
     background-color: #E7E9E4;
     background-image: url("/img/back.png");
@@ -96,16 +135,17 @@ quando eu clico em algo, ele come o espaço da coisa. */
     text-align: center;
     font-family: 'Alata', sans-serif;
     color: #E7E9E4;
-    font-size: 30px;
+    font-size: 5vw;
+    padding: 14px;
     margin-bottom: 10px;
 }
 .header h2{
-    width: 50vw;
+    width: 60vw;
     height: auto;
     text-align: center;
     font-family: 'Alata', sans-serif;
     color: #E7E9E4;
-    font-size: 16px;
+    font-size: 2vw;
     margin-bottom: 15px;
 }
 .header a{
@@ -121,22 +161,13 @@ quando eu clico em algo, ele come o espaço da coisa. */
     background-color: #E7E9E4;
     color: #1B2B42;
 }
-#seta{
-    width: 70px;
-    height: 70px;
-    position: fixed;
-    right: 20px;
-    bottom: 20px;
-    z-index: 1;
-    cursor: pointer;
-}
 #metas{
-    width: auto;
+    width: 100%;
     height: auto;
+    flex-direction: column;
     display: flex;
-    align-items: baseline;  /*o float não ficou muito bom, melhor continuar assim*/
+    align-items: center;
     justify-content: center;
-    margin: 30px 0 30px 0;
     background-color: #f7f7f7;
 }
 #metas img{
@@ -145,7 +176,6 @@ quando eu clico em algo, ele come o espaço da coisa. */
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 15px 0 15px 0;
 }
 #metas h4{
     font-family: 'Alata', sans-serif;
@@ -160,7 +190,7 @@ quando eu clico em algo, ele come o espaço da coisa. */
     text-align: justify;
 }
 #metas div{
-    width: 16%;
+    width: 60%;
     height: auto;
 }
 #meta1{
@@ -168,340 +198,295 @@ quando eu clico em algo, ele come o espaço da coisa. */
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    padding: 20px 25px 20px 0;
+    padding: 25px 0 25px 0;
 }
 #meta2{
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    padding: 20px 25px 20px 0;
+    padding: 0 0 25px 0;
 }
 #meta3{
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    padding: 20px 25px 20px 0;
+    padding: 0 0 25px 0;
 }
 #meta4{
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    padding: 20px 25px 20px 0;
+    padding: 0 0 25px 0;
 }
 #meta5{
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: column;
-    padding: 20px 0 20px 0;
+    flex-direction: column; 
+    padding: 0 0 25px 0;
 }
 .texto1 {
-    width: auto;
+    width: 100%;
     height: auto;
-    display: flex;
+    display: flex;   /*tentei usar o display: block;, mas as coisas nao ficavam centralizadas*/
     align-items: center;
     justify-content: space-between;
+    flex-direction: column;
     background-color: white; /*#1B2B42*/
-    border-left: 2.9vw #3E606F solid; 
 }
 .parteesquerda {
-    width: 40%;
+    width: 70%;
     height: auto;
-    padding: 50px;   
+    padding: 20px;   
 }
 .parteesquerda h1 {
     font-family: 'Alata', sans-serif;
     color: #1B2B42; /*#E7E9E4*/
     font-size: 20pt;
-    margin-left: 30px;
+    text-align: center;
 }
 .parteesquerda p {
     font-family: 'Alata', sans-serif;
     font-size: 12pt;
     text-align: justify;
-    margin-left: 30px;
     color: #1B2B42;
+    margin-top: 1.5vh;
 }
 .partedireita {
-    display: flex;
-    width: 40%;
+    width: 70%;
     height: auto;
-    float: right;
-    margin-right: 80px;
+    margin: 15px 0 25px 0;
 }
 .partedireita img{
     width: 100%;
     height: auto;
     display: flex;
     align-items: center;
-    margin: 30px 0 30px 0;
     border-radius: 3px;
 }
  .texto2{
-    width: auto;
+    width: 100%;
     height: auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #f7f7f7;
-    border-left: 2.9vw #91AA9D solid;
+    flex-direction: column;
+    background-color: #f7f7f7; /*#53C7A4; */
+    /* box-shadow: 1px 1px 10px black; */
 }
 .parteesquerda2 {
-    width: 40%;
+    width: 70%;
     height: auto;
-    margin-left: 80px;
+    margin: 25px 0 15px 0;
 }
 .parteesquerda2 img {
     width: 100%;
     height: auto;
     display: flex;
     align-items: center;
-    margin: 30px 80px 30px 0;
     border-radius: 3px;
 }
 .partedireita2{
-    width: 40%;
-    height: auto;    
-    padding: 50px;
-    padding-right: 80px;
+    width: 70%;
+    height: auto;
+    margin: 15px 0 25px 0; 
 }
 .partedireita2 h1 {
     font-family: 'Alata', sans-serif;
     color: #1B2B42;
     font-size: 20pt;
     font-weight: bold;
-    text-align: right;
+    text-align: center;
 }
 .partedireita2 p {
     font-family: 'Alata', sans-serif;
     font-size: 12pt;
     text-align: justify;
     color: #1B2B42;
+    margin-top: 1.5vh;
 }
 /* DUVIDA: por que o texto fica por cima da imagem? é por causa que a imagem da esquerda não se adapta e não quebra a linha */
 .texto3 {
-    width: auto;
+    width: 100%;
     height: auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-direction: column;
     background-color:white;
-    border-left: 2.9vw #D1DBBD solid;
 }
 .parteesquerda3 {
-    width: 40%;
+    width: 70%;
     height: auto;
-    margin: 0 0px 20px 0px; 
+    margin: 15px 0 25px 0;
 }
 .parteesquerda3 h1 {
     font-family: 'Alata', sans-serif;
     color: #1B2B42;
     font-size: 20pt;
-    margin: 30px 0 0 80px;
+    text-align: center;
 }
 .parteesquerda3 p {
     font-family: 'Alata', sans-serif;
     font-size: 12pt;
     text-align: justify;
-    margin-left: 80px;
     color: #1B2B42;
+    margin-top: 1.5vh;
 }
 .partedireita3 {
     display: flex;
-    width: 40%;
+    width: 70%;
     height: auto;
     float: right;
-    margin-right: 80px;
+    margin: 15px 0 25px 0;
 }
 .partedireita3 iframe{
     width: 100%; /* precisa ser 100% para ser dinamico */
-    height: 430px;
+    height: 400px;
     display: flex;
     align-items: center;
     margin: 30px 0 30px 0;
     border-radius: 3px;
 }
 .texto4{
-    width: auto;
+    width: 100%;
     height: auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-direction: column;
     background-color: #f7f7f7;
-    border-left: 2.9vw #3E5366 solid;
 }
 .parteesquerda4{
-    width: 40%;
+    width: 70%;
     height: auto;
-    margin: 0 0px 0px 80px;
+    margin: 25px 0 15px 0;
 }
 .parteesquerda4 iframe{
     width: 100%;
-    height: 430px;
+    height: 400px;
     display: flex;
     align-items: center;
-    margin: 30px 0 30px 0;
     border-radius: 3px;
 }
 .partedireita4 {
-    width: 40%;
+    width: 70%;
     height: auto;
-    padding: 50px;
-    padding-right: 80px;
+    margin: 15px 0 25px 0;
 }
 .partedireita4 h1{
     font-family: 'Alata', sans-serif;
     color: #1B2B42;
     font-size: 20pt;
-    text-align: right;
+    text-align: center;
 }
 .partedireita4 p{
     font-family: 'Alata', sans-serif;
     font-size: 12pt;
     text-align: justify;
     color: #1B2B42;
+    margin-top: 1.5vh;
 }
 .texto5 {
-    width: auto;
+    width: 100%;
     height: auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: white;
-    border-left: 2.9vw #193441 solid;
+    flex-direction: column;
+    background-color: white; /*#1B2B42*/
 }
 .parteesquerda5 {
-    width: 40%;
+    width: 70%;
     height: auto;
-    padding: 50px;
-    padding-left: 80px;
-    
+    margin: 15px 0 25px 0;
 }
 .parteesquerda5 h1 {
     font-family: 'Alata', sans-serif;
     color: #1B2B42; /*#E7E9E4*/
     font-size: 18pt;
+    text-align: center;
 }
 .parteesquerda5 p {
     font-family: 'Alata', sans-serif;
     font-size: 12pt;
     text-align: justify;
     color: #1B2B42;
+    margin-top: 1.5vh;
 }
 .partedireita5 {
     display: flex;
-    width: 40%;
+    width: 70%;
     height: auto;
     float: right;
-    margin-right: 80px;
+    margin: 15px 0 25px 0;
 }
 .partedireita5 img{
     width: 100%;
     height: auto;
     display: flex;
     align-items: center;
-    margin: 30px 0 30px 0;
+    justify-content: center;
     border-radius: 3px;
 }
-
 .texto6 {
-    width: auto;
+    width: 100%;
     height: auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #f7f7f7;
-    border-left: 2.9vw #3E606F solid;
+    flex-direction: column;
+    background-color: #f7f7f7; /*#1B2B42*/
 }
 .partedireita6 {
-    width: 40%;
+    width: 70%;
     height: auto;
-    padding: 50px;
-    padding-right: 80px;
+    margin: 15px 0 25px 0;
 }
 .partedireita6 h1 {
     font-family: 'Alata', sans-serif;
     color: #1B2B42; /*#E7E9E4*/
     font-size: 23pt;
-    text-align: right;
+    text-align: center;
 }
 .partedireita6 p {
     font-family: 'Alata', sans-serif;
     font-size: 12pt;
     text-align: justify;
     color: #1B2B42;
+    margin-top: 1.5vh;
 }
 .parteesquerda6 {
     display: flex;
-    width: 40%;
-    height: auto;
-    float: right;
-    margin-left: 80px;
-}
-.parteesquerda6 img{
     width: 70%;
     height: auto;
+    justify-content: center;
+}
+.parteesquerda6 img{
+    width: 50%;
+    height: auto;
     display: flex;
     align-items: center;
-    margin-top: 5px;
+    justify-content: center;
+    margin-top: 15px;
     margin-bottom: 25px;
 }
-.saibamais{
-    width: auto;
-    height: auto;
-    background-color: #f7f7f7;
-    font-family: 'Alata', sans-serif;
-    font-size: 12pt;
-    color: #1B2B42;
-    padding: 3vw 0 3vw 0;
-    border-left: 2.9vw #91AA9D solid;
-}
-.saibamais .videos{
-    width: 100%;
-    height: auto;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding-top: 25px;
-    padding-bottom: 25px;
-}
-.saibamais iframe{
-    width: 50vw;
-    height: 300px;
-    padding: 0 3vw 3vw 3vw;
-}
-.saibamais h2{
-    width: 100%;
-    padding-bottom: 10px;
-    font-size: 23pt;
-    text-align: center;
-}
-.saibamais a{
-    width: 100%;
-    font-family: 'Alata', sans-serif;
-    font-size: 1vw;
-    text-decoration: none;
-    color: #1B2B42;
-    margin-left: 4.8vw;
-}
 .texto7 {
-    width: auto;
+    width: 100%;
     height: auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: white;
-    border-left: 2.9vw #D1DBBD solid;
+    flex-direction: column;
+    background-color: white; /*#1B2B42*/
 }
 .parteesquerda7 {
-    width: 40%;
+    width: 70%;
     height: auto;
-    padding: 50px;
-    padding-left: 80px;
-    
+    margin-top: 15px;
 }
 .parteesquerda7 h1 {
     font-family: 'Alata', sans-serif;
@@ -513,50 +498,88 @@ quando eu clico em algo, ele come o espaço da coisa. */
     font-size: 12pt;
     text-align: justify;
     color: #1B2B42;
+    margin-top: 1.5vh;
 }
 .partedireita7 {
+    margin-top: 15px;
     display: flex;
-    width: 40%;
+    width: 70%;
     height: auto;
-    float: right;
-    margin-right: 80px;
+    justify-content: center;
 }
 .partedireita7 img{
+    width: 50%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    border-radius: 3px;
+    margin: 20px 0 25px 0;
+}
+
+.saibamais{
+    width: 100%;
+    height: auto;
+    display: block;
+    background-color: #f7f7f7;
+    font-family: 'Alata', sans-serif;
+    color: #1B2B42;
+}
+.saibamais .videos{
     width: 100%;
     height: auto;
     display: flex;
     align-items: center;
-    margin: 30px 0 30px 0;
-    border-radius: 3px;
+    flex-direction: column;
+    padding-top: 25px;
+    padding-bottom: 25px;
 }
-
+.saibamais iframe{
+    width: 70%;
+    height: 300px;
+    padding: 15px 0 15px 0;
+}
+.saibamais h2{
+    width: 100%;
+    padding-bottom: 10px;
+    font-size: 5vw;
+    text-align: center;
+    margin-top: 15px;
+}
+.saibamais a{
+    width: 100%;
+    font-family: 'Alata', sans-serif;
+    font-size: 2vw;
+    text-decoration: none;
+    color: #1B2B42;
+    margin-left: 15vw;
+}
 .bibliografia{
-    width: auto;
+    width: 100vw;
     height: auto;
     background-color: white;
     font-family: 'Alata', sans-serif;
     font-size: 12pt;
     color: #1B2B42;
-    padding: 25px 0 25px 0;
-    padding-left: 80px;
-    border-left: 2.9vw #3E5366 solid;
 }
 .bibliografia h2{
     width: 100%;
     padding-bottom: 10px;
     font-size: 23pt;
+    text-align: center;
+    padding-top: 15px;
 }
 .bibliografia p{
-    width: 100%;
+    width: 70%;
     font-family: 'Alata', sans-serif;
-    font-size: 10pt;
+    font-size: 1.5vw;
+    text-align: left;
+    margin-left: 5vw;
 }
 .rodape{
     width: 100%;
     height: 75px;
     background-color: #1B2B42;
     margin: 0;
-    position: absolute;
     /* box-shadow: 0px -5px 10px rgba(0, 0, 0, 0.425); */
 }
 .rodape p{

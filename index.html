@@ -3,13 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="/css/style.css" rel="stylesheet">
+    <link href="/css/style.css" media="screen and (min-width: 1051px)" rel="stylesheet">
+    <link href="/css/style-mobile copy.css" media="screen and (max-width: 1050px)" rel="stylesheet">
+    <link href="/css/style-mobile.css" media="screen and (max-width: 700px)" type="text/css" rel="stylesheet">
     <title>ODS 9</title>
     <link rel="icon" href="img/idea.svg">
+    <script language="javascript" src="/js/script.js"></script>
 </head>
 <body>
     <nav class="navcima">
-        <a id="img" href="#header"><img src="img/logo2.svg" alt="logo" title="inovação"></a>
+        <a id="img" onclick="window.location.reload()"><img src="img/logo2.svg" alt="logo" title="inovação"></a>
+        <a onclick="openNav()" class="menua"> <img class="menu" src="/img/tracos.svg" alt="menu"/> </a>
         <ul>
             <li><a href="#metas">Metas</a></li>
             <li><a href="#conteudo">Conteúdo</a></li>
@@ -20,11 +24,25 @@
             <li><a href="#sobremim">Sobre Mim</a></li>
         </ul>
     </nav>
+    <!-- menu lateral -->
+    <nav id="mySidenav" class="sidenav" id="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a class="traco">
+        <a href="#sobre">Sobre</a>
+        <div class="final"><a class="copy">&copy; Pedro Franco</a></div>
+        <div class="fotos">
+            <a href="//github.com/stashox"> <img src="/img/github.png" alt="github" title="meu git hub" class="github"/> </a>
+            <a href="//www.instagram.com/pedrokfranco/"> <img src="/img/insta.png" alt="instagram" title="meu instagram" class="insta"/> </a>
+        </div>    
+        </a>
+    </nav>
+      <!--  -->
     <section class="header" id="header">
         <h1>INDÚSTRIA, INOVAÇÃO E INFRAESTRUTURA</h1>
         <h2>“O maior obstáculo para o sucesso futuro de uma empresa é o sucesso do passado.”<br>— Dan Schulman, CEO do PayPal</h2>
         <a href="https://nacoesunidas.org/pos2015/ods9/">ODS 9</a>
     </section>
+    <a href="#header"><img id="seta" src="img/seta.svg" alt="voltar"/></a>
     <section id="metas">
         <div id="meta1">
             <h4>Meta 1</h4>
@@ -137,11 +155,8 @@
 
     <section class="saibamais" id="saibamais">
         <h2>Saiba mais!</h2>
-        <p>
-            https://www.conjur.com.br/2020-set-03/senso-incomum-robo-julgar-quem-programa-robo?fbclid=IwAR2cTw4RGRMHjkOHvYlaBmaA9PsEtYDierCsqRJwOfd-1oV5oMfYM12KKMo <br>
-
-            https://epocanegocios.globo.com/Tecnologia/noticia/2019/04/conheca-o-primeiro-livro-escrito-por-uma-inteligencia-artificial.html <br>
-        </p>
+        <a href="https://www.conjur.com.br/2020-set-03/senso-incomum-robo-julgar-quem-programa-robo?fbclid=IwAR2cTw4RGRMHjkOHvYlaBmaA9PsEtYDierCsqRJwOfd-1oV5oMfYM12KKMo">Inteligencia artifical como Juiz?</a> <br>
+        <a href="https://epocanegocios.globo.com/Tecnologia/noticia/2019/04/conheca-o-primeiro-livro-escrito-por-uma-inteligencia-artificial.html">Primeiro livro escrito por inteligência artificial</a> <br>
         <div class="videos">
           <iframe width="560" height="315" src="https://www.youtube.com/embed/G4hcT6fUoBw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         <iframe width="560" height="315" src="https://www.youtube.com/embed/OEo14_iw7ho" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -152,21 +167,14 @@
 
     <section class="bibliografia" id="bibliografia">
         <h2>Bibliografia</h1>
-        <p> https://www.migalhas.com.br/depeso/306154/imperdivel-o-que-voce-precisa-saber-sobre-as-novas-profissoes-juridicas<br>
-
-            https://www.correiobraziliense.com.br/app/noticia/eu-estudante/trabalho-e-formacao/2018/01/28/interna-trabalhoeformacao-2019,656217/como-a-tecnologia-vai-revolucionar-o-emprego.shtml<br>
-            
-            https://www.delltechnologies.com/content/dam/delltechnologies/assets/perspectives/2030/pdf/Realizing-2030-A-Divided-Vision-of-the-Future-Summary.pdf<br>
-            
-            
-            https://www.youtube.com/watch?v=kjhu1LEmRpY - automação <br>
-            https://www.youtube.com/watch?v=zCpf_-wOK28 - soft skills <br>
-            
-            https://www.napratica.org.br/como-desenvolver-soft-skills/
-            https://epocanegocios.globo.com/Empresa/noticia/2017/07/epoca-negocios-mcdonalds-abre-1a-loja-digital.html <br>
-
-            https://eco.nomia.pt/pt/economia-circular/estrategias#:~:text=Economia%20Circular%20%C3%A9%20um%20conceito,reciclagem%20de%20materiais%20e%20energia.<br>
-        </p>
+        <p>https://www.migalhas.com.br/depeso/306154/imperdivel-o-que-voce-precisa-saber-sobre-as-novas-profissoes-juridicas</p> <br>
+        <p>https://www.correiobraziliense.com.br/app/noticia/eu-estudante/trabalho-e-formacao/2018/01/28/interna-trabalhoeformacao-2019,656217/como-a-tecnologia-vai-revolucionar-o-emprego.shtml</p> <br>
+        <p>https://www.delltechnologies.com/content/dam/delltechnologies/assets/perspectives/2030/pdf/<br>Realizing-2030-A-Divided-Vision-of-the-Future-Summary.pdf</p> <br>
+        <p>https://www.youtube.com/watch?v=kjhu1LEmRpY</p> <br> 
+        <p>https://www.youtube.com/watch?v=zCpf_-wOK28</p> <br>
+        <p>https://www.napratica.org.br/como-desenvolver-soft-skills/</p> <br>
+        <p>https://epocanegocios.globo.com/Empresa/noticia/2017/07/epoca-negocios-mcdonalds-abre-1a-loja-digital.html</p> <br>
+        <p>https://eco.nomia.pt/pt/economia-circular/estrategias#:~:text=Economia%20Circular%20%C3%A9%20<br>um%20conceito,reciclagem%20de%20materiais%20e%20energia.</p> <br>
     </section>
 
     <address class="rodape">
