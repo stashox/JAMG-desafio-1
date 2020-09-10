@@ -72,24 +72,29 @@ quando eu clico em algo, ele come o espaço da coisa. */
   .sidenav .fotos{
     display: flex;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: flex-end;
     height: auto;
-    margin-left: 3px;
-    margin-top: -3px;
+    margin-top: -1vh;
   }
   .sidenav .github {
-      margin: 0 0 0 -3.5px;
+      margin: 0 5px 0 -3.5px;
   }
   .sidenav a {
-      width: auto;
+    width: auto;
     height: auto;
-    padding: 0 8px 3px 20px;
+    padding: 0.7vh 0 3px 1.5vw;
     text-decoration: none;
-    font-size: 25px;
-    color: #ffffff;
+    font-size: 20pt;
     display: block;
     transition: 0.2s;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Alata', sans-serif;
+    color: #E7E9E4;
+    text-align: center;
+    margin-right: 1vw;
+  }
+  .sidenav .copy{
+      margin-top: 15px;
+      text-align: right !important;
   }
   .sidenav .closebtn {
     position: absolute;
@@ -99,6 +104,7 @@ quando eu clico em algo, ele come o espaço da coisa. */
     margin-left: 50px;
   }
   .sidenav .traco {
+    width: 100%;
     border-top: 1px solid rgba(235, 235, 235, 0.418);
     margin-top: 15px;
     box-shadow: 0px -6px 3px rgba(0, 0, 0, 0.021); /*colocar sombras*/
@@ -577,14 +583,14 @@ quando eu clico em algo, ele come o espaço da coisa. */
 }
 .rodape{
     width: 100%;
-    height: 75px;
+    height: 10vh;
     background-color: #1B2B42;
-    margin: 0;
+    padding: 0 0 15px 0;
     /* box-shadow: 0px -5px 10px rgba(0, 0, 0, 0.425); */
 }
 .rodape p{
     width: auto;
-    height: 100%;
+    height: auto;
     color: #E7E9E4;
     text-align: left;
     display: flex;
@@ -592,4 +598,27 @@ quando eu clico em algo, ele come o espaço da coisa. */
     font-family: 'Alata', sans-serif;
     font-size: 12pt;
     padding-left: 50px;
+    padding-top: 2vh;
+}
+.rodape a{
+    width: auto;
+    height: auto;
+    color: #E7E9E4;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    font-family: 'Alata', sans-serif;
+    font-size: 12pt;
+    padding-left: 50px;
+    padding-top: 5px;
+    text-decoration: none;
+}
+#titlee{
+    display: flex;
+    align-items: center;
+    color: #E7E9E4;
+    font-family: 'Alata', sans-serif;
+    font-size: 20pt;
+    float: right;
+    margin-right: 10vw;
 }
